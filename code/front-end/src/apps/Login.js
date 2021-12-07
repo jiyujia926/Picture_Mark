@@ -5,7 +5,7 @@ import "../css/Login.css"
 
 axios.defaults.withCredentials = true
 axios.defaults.headers.post['Content-Type'] = 'application/json'
-const server = 'http://122.51.228.166:8000'
+const server = 'http://127.0.0.1:8000'
 
 class Login extends React.Component{
     constructor(props){
@@ -27,7 +27,7 @@ class Login extends React.Component{
         let data={...this.state}
         console.log(data)
         let res = await axios.post(`${server}/login/`,data)
-        // console.log(res)
+        console.log(res)
         if (res.data == "密码正确")
             window.location.href="http://127.0.0.1:3000/home"
         else
