@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from 'axios'
 import "../css/Login.css"
-import {Navigate} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 axios.defaults.withCredentials = true
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 // const server = 'http://127.0.0.1:8000'
@@ -46,6 +46,7 @@ class Login extends React.Component{
                         <input type="text" name="username" placeholder="请输入用户名" className="input-item" onChange= {e=>(this.change('username',e))}/>
                         <input type="password" name="password" placeholder="请输入密码" className="input-item" onChange={e=>(this.change('password',e))}/>
                         <input type="submit" name="submit" value="登录" className="btn"/>
+                        <a href="/register">没有账号？点击注册</a>
                     </form>
 
                 </div>
