@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Register from './apps/Register'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <Register /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
