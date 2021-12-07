@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from 'axios'
 import "../css/Register.css"
+import { Navigate } from "react-router";
 
 axios.defaults.withCredentials = true
 axios.defaults.headers.post['Content-Type'] = 'application/json'
@@ -15,7 +16,8 @@ class Register extends React.Component{
             password:"",
             repassword:"",
             emailaddress:"",
-            telephone:""
+            telephone:"",
+            isregisteredflag:false
         }
         this.change = this.change.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -36,11 +38,13 @@ class Register extends React.Component{
         console.log(data)
         let res = await axios.post(`${server}/register/`,data)
         console.log(res)
-        window.location.href="http://127.0.0.1:3000"
+        this.setState({isregisteredflag:!this.state.isregisteredflag})
 
     }
     render()
     {
+        if (this.state.isregisteredflag)
+            return (<Navigate to='/'/>)
         return (
             // <div className = "Register">
             //     <div className = "Register-head">用户注册</div>

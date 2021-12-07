@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from 'axios'
 import "../css/Login.css"
-
+import {Navigate} from 'react-router-dom'
 axios.defaults.withCredentials = true
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 const server = 'http://127.0.0.1:8000'
@@ -12,7 +12,8 @@ class Login extends React.Component{
         super(props)
         this.state = {
             username:"",
-            password:""
+            password:"",
+            loginflag:false
         }
         this.change = this.change.bind(this)
         this.handleLogin = this.handleLogin.bind(this)
@@ -24,16 +25,18 @@ class Login extends React.Component{
     }
     async handleLogin(e){
         e.preventDefault()
-        let data={...this.state}
+        let data={'username':this.state.username,'password':this.state.password}
         console.log(data)
         let res = await axios.post(`${server}/login/`,data)
         console.log(res)
         if (res.data == "密码正确")
-            window.location.href="http://127.0.0.1:3000/home"
+            this.setState({loginflag:!this.state.loginflag})
         else
             alert("密码错误或未注册！")
     }
     render(){
+        if (this.state.loginflag)
+            return (<Navigate to="/home"/>)
         return(
             <div className="container">
                 <div className="login-wrapper">
