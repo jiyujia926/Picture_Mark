@@ -25,4 +25,5 @@ def login(request):
     else:
         return HttpResponse("未注册")
     
-    
+def index(request):
+    return HttpResponse("!!!!!!!!!!!!!!!")
