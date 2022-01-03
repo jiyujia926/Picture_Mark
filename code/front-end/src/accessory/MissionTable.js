@@ -11,7 +11,7 @@ import axios from "axios";
 import { Button } from "@mui/material";
 axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "application/json";
-const server = "http://127.0.0.1:8000";
+const server = "http://122.51.228.166:8000";
 // const rows = [
 //   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
 //   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
