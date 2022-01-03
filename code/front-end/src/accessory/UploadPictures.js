@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
-const server = "http://127.0.0.1:8000";
+const server = "http://122.51.228.166:8000";
 const Input = styled('input')({
     display: 'none',
   });

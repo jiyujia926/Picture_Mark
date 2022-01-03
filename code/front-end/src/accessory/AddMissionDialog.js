@@ -10,7 +10,7 @@ import cookie from 'react-cookies'
 import axios from 'axios'
 axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "application/json";
-const server = "http://127.0.0.1:8000"
+const server = "http://122.51.228.166:8000"
 export default function AddMissionDialog() {
   const [open, setOpen] = React.useState(false);
   const [username,setUsername] = React.useState(cookie.load('username'))
