@@ -13,4 +13,5 @@ body {
 }
 #root {
   height: 100%;
+  background-image: linear-gradient(to right,#e9eea0,#e6b5fa);
 }

@@ -1,0 +1,46 @@
+.homewrapper {
+    background-color: white;
+    width: 85%;
+    height: 90%;
+    border-radius: 15px;
+    padding: 0 50px;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    right: 5%;
+    display: flex;
+}
+h1 {
+    height: 10%;
+}
+.picturelist {
+
+    position: absolute;
+    right: 25%;
+    width: 50%;
+    display: flex;
+    padding: 5;
+}
+.pictures {
+    width: 100%;
+    padding: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.tag {
+    display: inline;
+}
+.tagbuttion {
+    width: 25%;
+    height: 35px;
+    display:flex
+}
+.checkbox {
+    height: 50%;
+}
+.homewrapper p {
+    width: 250px;
+    text-align:left;
+    padding: 10;
+    display: flex;
+}
