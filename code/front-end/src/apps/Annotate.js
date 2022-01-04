@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import ReactImageAnnotate from "react-image-annotate";
-import { useParams } from "react-router-dom";
 import cookie from "react-cookies";
 axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "application/json";

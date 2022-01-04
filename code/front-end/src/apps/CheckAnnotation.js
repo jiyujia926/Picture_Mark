@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import ReactImageAnnotate from "react-image-annotate";
-import { useParams } from "react-router-dom";
-import cookie from "react-cookies";
-import { unstable_extendSxProp } from "@mui/system";
 axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 const server = "http://122.51.228.166:8000";

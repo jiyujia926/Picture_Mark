@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import axios from 'axios'
 import "../css/Register.css"
 import { Navigate } from "react-router";

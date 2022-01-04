@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import axios from 'axios'
 import "../css/Login.css"
-import {Link, Navigate} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 import cookie from 'react-cookies'
 axios.defaults.withCredentials = true
 axios.defaults.headers.post['Content-Type'] = 'application/json'

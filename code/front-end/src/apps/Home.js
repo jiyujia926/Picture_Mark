@@ -1,10 +1,4 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import axios from "axios";
-import ReactImageAnnotate from "react-image-annotate";
-import Login from "./Login";
-import Circle from "./Draw";
-import Sidebar from "../accessory/Sidebar";
 import cookie from 'react-cookies'
 import "../css/Home.css";
 import NewMissionDialog from "../accessory/NewMissionDialog";
