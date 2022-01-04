@@ -150,7 +150,7 @@ export default function MissionDetail() {
     }
   }
   const handlemission = () => {
-    if (rightData && selectedtags) {
+    if (rightData.length>0 && selectedtags.length>0) {
       // handinmission()
       console.log(selectedtags);
       console.log(rightData);
