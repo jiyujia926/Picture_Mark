@@ -68,10 +68,17 @@ export default function AnnotationList() {
   const exportjson = (e)=> {
     window.open("http://122.51.228.166:8000/export/"+mid+"/"+e.target.value);
   }
-
+  const backto = ()=> {
+      window.location.href = '/home/'
+  }
   return (
     <div className="homewrapper">
-      <p>当前任务:{mid}</p>
+      <div>
+      <Button variant="outlined" onClick={backto}>返回</Button>
+      <p>当前任务:</p>
+      <p>{mid}</p>
+      </div>
+      
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
