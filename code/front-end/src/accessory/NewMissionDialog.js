@@ -80,9 +80,10 @@ export default function NewMissionDialog() {
           <TextField
             margin='dense'
             id="description"
-            label="标注任务描述"
+            label="标注任务描述(必填)"
             type="text"
             fullWidth
+            required
             variant="standard"
             onChange={handlemissiondescription}
           />

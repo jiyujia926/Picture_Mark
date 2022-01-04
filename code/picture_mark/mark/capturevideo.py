@@ -2,8 +2,8 @@ import cv2
 import os
 import shutil
 def do_capture(filepath:str,filename:str):
-    print(filename)
-    print(os.getcwd())
+    # print(filename)
+    # print(os.getcwd())
     # filepath = "D:\\Picture_Mark\\code\\picture_mark\\media\\videoes\\演示视频.mp4"
     vc = cv2.VideoCapture(filepath)
     c = 0
@@ -23,7 +23,7 @@ def do_capture(filepath:str,filename:str):
         # print(c,timeF,c%timeF)
         if (c%timeF == 0):
             # print("write...")
-            print(os.getcwd()+'/media/videoes/cutpictures/'+filename+'--'+str(i)+'.jpg')
+            # print(os.getcwd()+'/media/videoes/cutpictures/'+filename+'--'+str(i)+'.jpg')
             cv2.imwrite(os.getcwd()+'/media/videoes/cutpictures/'+filename+'--'+str(i)+'.jpg',frame)
             # print("success")
             i+=1
