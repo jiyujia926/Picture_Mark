@@ -29,11 +29,11 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Annotate from "./Annotate";
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 // const server = "http://127.0.0.1:8000";
-const server = "http://122.51.228.166:8000"
+const server = "http://122.51.228.166:8000";
 const ariaLabel = { "aria-label": "description" };
 export default function MissionDetail() {
   const [checked, setChecked] = React.useState([0]);
@@ -127,36 +127,35 @@ export default function MissionDetail() {
   const handleselecttag = (e) => {
     selectedtags.push(e.target.value);
   };
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleannotate = () => {
-  cookie.remove('tag')
-  cookie.save('tag',selectedtags)
-  cookie.remove('images')
-  cookie.save('images',rightData)
-  cookie.remove('mid')
-  cookie.save('mid',mid)
-  navigate('/annotate')
-  }
+    cookie.remove("tag");
+    cookie.save("tag", selectedtags);
+    cookie.remove("images");
+    cookie.save("images", rightData);
+    cookie.remove("mid");
+    cookie.save("mid", mid);
+    navigate("/annotate");
+  };
   async function handinmission() {
     let data = {
-      mid:mid,
-      tags:selectedtags,
-      images:rightData
-    }
-    let res = await axios.post(`${server}/handinmission/`,data)
-    if (res.data==="发布成功") {
-      alert("发布成功")
-      window.location.href = '/home/'
+      mid: mid,
+      tags: selectedtags,
+      images: rightData,
+    };
+    let res = await axios.post(`${server}/handinmission/`, data);
+    if (res.data === "发布成功") {
+      alert("发布成功");
+      window.location.href = "/home/";
     }
   }
   const handlemission = () => {
-    console.log(selectedtags)
-    console.log(rightData)
-    if (rightData && selectedtags)
-      handinmission()
-    else
-      alert("选中的图片或TAG不能为空")
-  }
+    if (rightData && selectedtags) {
+      // handinmission()
+      console.log(selectedtags);
+      console.log(rightData);
+    } else alert("选中的图片或TAG不能为空");
+  };
   console.log(selectedtags);
   return (
     <div className="homewrapper">
@@ -212,12 +211,12 @@ export default function MissionDetail() {
             添加tag
           </Button>
           {/* <Link to='/annotate' state={{tags:{tags}}}> */}
-            {/* <Button variant="contained" onClick={handleannotate}>
+          {/* <Button variant="contained" onClick={handleannotate}>
               进入标注
             </Button> */}
-            <Button variant="contained" onClick={handlemission}>
-              发布任务
-            </Button>
+          <Button variant="contained" onClick={handlemission}>
+            发布任务
+          </Button>
           {/* </Link> */}
         </div>
 
