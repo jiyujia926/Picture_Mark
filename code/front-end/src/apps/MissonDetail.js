@@ -152,7 +152,10 @@ export default function MissionDetail() {
   const handlemission = () => {
     console.log(selectedtags)
     console.log(rightData)
-    handinmission()
+    if (rightData && selectedtags)
+      handinmission()
+    else
+      alert("选中的图片或TAG不能为空")
   }
   console.log(selectedtags);
   return (
