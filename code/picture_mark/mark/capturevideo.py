@@ -18,6 +18,8 @@ def do_capture(filepath:str,filename:str):
     i=0
     while rval:
         rval,frame = vc.read()
+        if frame is None:
+            break
         # print(c,timeF,c%timeF)
         if (c%timeF == 0):
             # print("write...")
