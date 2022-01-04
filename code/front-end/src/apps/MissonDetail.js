@@ -151,9 +151,10 @@ export default function MissionDetail() {
   }
   const handlemission = () => {
     if (rightData.length>0 && selectedtags.length>0) {
-      // handinmission()
+
       console.log(selectedtags);
       console.log(rightData);
+      handinmission()
     } else alert("选中的图片或TAG不能为空");
   };
   console.log(selectedtags);
